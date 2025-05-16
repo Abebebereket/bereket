@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/easy.css">
+    <script src="js/easy.js" defer></script>
+    <title>Speed Typing Game</title>
+</head>
+<body>
+
+    <div id="mycontainer" class="container">
+        <div id="rules" class="game_starter">
+                        <h3>How to Play</h3>
+         <p>Click "Start" to begin.</P>
+      <p>   A random word or sentence will appear on the screen.
+         Start typing the given text as quickly and accurately as possible.
+         If you make a mistake, you must correct it before continuing.
+         Your time will be tracked, and your score will be based on speed and accuracy.
+         Once the time is up, your Words Per Minute and accuracy percentage will be displayed. </p>
+              
+         <h3>Game Rules</h3>
+          <p> ✅ Type Exactly as Shown – Spelling, punctuation, and spaces must match the given text.</p>
+          <p>  ✅ No Backspacing Penalty – You can fix mistakes, but time keeps running.</p>
+          <p>  ✅ Timer Starts When You Begin Typing – No delays!</p>
+          <h3>Scoring System</h3> 
+            
+          <p> ✅ WPM (Words Per Minute): Measures typing speed.</p>
+           <p> ✅ Accuracy (%): Tracks how many characters were typed correctly.</p>
+            <h3>Game Modes:</h3> 
+            <p>✅ Timed Mode: Type as many words as possible in a limited time</p>
+        
+            <button class="btn" onclick="hideContainer()">Start </button>
+           
+            <button class="btback" id="btback" onclick="history.back()">Back </button>
+            <script>
+                function hideContainer() {
+                    document.getElementById('rules').style.display = 'none';
+                }
+            </script>
+        </div>
+        
+        <div class="game hidden">
+            <div class="top">
+                <div class="single">
+                    <span>WPM: </span>
+                    <span class="wpm">30.33</span>
+                </div>
+                <div class="single">
+                    <span>Score: </span>
+                    <span class="score">0</span>
+                </div>
+                <div class="single">
+                    <span>Time Left: </span>
+                    <span class="time-left">30</span>
+                </div>
+            </div>
+            <div class="input-section">
+                <div class="word">Hello</div>
+                <input type="text" class="input">
+            </div>
+            <div class="text"></div>
+            <button id="back2" class="back1" onclick="history.back()">Exit</button>
+        </div>
+        <div class="game-ended hidden">
+            <h2>Game Ended...</h2>
+            <button class="game-ended-btn">Try Again</button>
+            <button  class="back1" onclick="history.back()">Exit</button>
+        </div>
+    </div>
+
+</body>
+</html>
